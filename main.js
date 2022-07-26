@@ -9,14 +9,14 @@ const proposal={
     "proposalHub":[]
 }
 
-form.addEventListener("post",addNewProposal);
-
 const addNewProposal=(e) =>{
     e.preventDefault;
 
     const newTitle=titleInput.value;
     const newDescription=descriptionInput.value;
     const newEmail=emailInput.value;
+
+form.addEventListener("post",addNewProposal);
 
 proposalObject={
     title:newTitle,
