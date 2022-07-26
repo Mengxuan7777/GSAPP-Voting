@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 20;
+    padding: 0
+}
+
+body {
+    background-image: linear-gradient(#2200ff, #ffffff);
+    font-family: Arial;
+    padding: 50px;
+    width: 80%;
+}
+
+h2{
+    text-align: left;
+    margin:20px 0px 10px;
+}
+
+form{
+    display: flex;
+    flex-direction:column;
+    width: 80%;
+    margin: auto;
+    padding:20px 0;
+    color:rgb(0, 0, 0)
+}
+
+.container{
+    margin:0px;
+    display: flex;
+}
+
+.left{
+    flex-basis: 100%;
+    width: 100%;
+}
+
+.h3{
+    font-weight: bolder;
+    font-size: xx-large;
+    color:blue;
+}
+
+input[type="text"]{    
+    height: 30px;
+    width: 100%;
+    background-color:transparent;
+    border-width: 1px;
+}
+
+input[class="description"]{
+    height: 300px;
+    width: 100%;
+    background-color:transparent;
+    border-width: 1px;
+}
+
+button[type="image"]{
+    height: 20px;
+    width: 90px;
+    float: right;
+    margin: 10px 0px 10px 10px;
+    background-color:rgb(229, 229, 229);
+    border-width: 1px;
+}
+
+button[type="post"]{
+    color:#FFF;
+    font-size: 200%;
+    padding: 2%;
+    background:#38ff01;
+    border:none;
+    margin: 0px;
+    float: right;
+    line-height: 2px;
+    border-radius:4px;
+}
