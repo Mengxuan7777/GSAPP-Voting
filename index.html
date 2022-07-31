@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
-      <h2>CREATE A PROPOSAL</h2>
-      <main class="container">
-        <!--     Left -->
-        <section class="left">
-          <h3>TITLE</h3>
-          <input class="title" type="text"/>
-          <h3>DESCRIPTION</h3>
-          <input class="description" type="text"/>
-          <button type="image">add images...</button>
-          <h3>PROPOSER</h3>
-          <input class="proposer" type="text"/>
-          <p>
-            <input type="checkbox" name="email" id="email">
-            <label for="email"> Get email updates of the proposal:</label>
-            <input class="email" type="text" placeholder="Your email">
-          </p>
-          <button type="post">Post</button>
-        </section>    
-        
-        </form>
-    
-                  
-      </main>
-  
-
-    <script src="main.js"></script>
+  <h2>CREATE A PROPOSAL</h2>
+    <main class="container">
+      <section class="left">
+        <form action="">
+          <div>
+            <label for="title">TITLE</label>
+            <input class="title" type="text" name="title"/>
+          </div>
+          <div>
+            <label for="description">DESCRIPTION</label>
+            <input class="description" type="text" name="description"/>
+          </div>
+          <div><span class="description_count"></span> characters left</div>
+          <div>
+            <input type="file" name="photo" accept="image/png, image/gif, image/jpeg">
+          </div>
+          <div>
+            <label for="proposer">PROPOSER</label>
+            <input class="proposer" type="text" name="proposer"/>
+          </div>
+          <div>
+            <button type="click">Post</button>
+          </div>
+        </form>            
+      </section>    
+    </main>
+  <script src="main.js"></script>
   </body>
 </html>
