@@ -34,11 +34,31 @@ function addProposal(e){
 
   console.log("this works")
   
-  let newProposal = proposalInput.value;
+  let newProposalTitle = proposalTitle.value;
+  let newProposalDescription = proposalDescription.value;
+  let newProposalProposer = proposalProposer.value;
 
   proposalObject = {
-
+    handle:"@bot",
+    name: newProposal
   }
+
+  displayProposal(proposalObject);
+  proposals.proposalList.push(proposalObject);
+  localStorage.setItem("proposals", JSON.stringify(proposals))
+}
+
+function displayProposal(proposal){
+  console.log(proposal)
+
+  let account_name = "Jess Liu"
+  let proposal_handle="@bot"
+
+  let newListItem = document.createElement("li");
+
+  newListItem.textContent = `${account_name} ${proposal_handle} ${proposal.name}`
+
+  form.reset()
 }
 
 // const form=document.querySelector("form");
