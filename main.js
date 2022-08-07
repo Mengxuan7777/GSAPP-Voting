@@ -1,38 +1,79 @@
 console.log ("this works!")
 
-const form=document.querySelector("form");
-const titleInput=document.querySelector(".title");
-const descriptionInput=document.querySelector(".description")
-const emailInput=document.querySelector(".email");
-const descriptionCount = document.querySelector('.description_count');
+const button= document.querySelector("button");
+const modal = document.querySelector(".modal");
+const closeBtn= document.querySelector(".close")
 
-const count = 100;
-descriptionCount.innerText = count;
+const proposalTitle = document.getElementsByName("title")
+const proposalDescription = document.getElementsByName("description")
+const proposalProposer = document.getElementsByName("proposer")
 
-const proposal={
-    "proposalHub":[]
+const proposalContainer = document.querySelector("ul");
+
+const proposals={
+  "proposalList": []
 }
 
-const addNewProposal=(e) =>{
-    e.preventDefault;
-    console.log(e.target)
+button.addEventListener("click",openModal);
+closeBtn.addEventListener("click",closeModal);
 
-    const newTitle=titleInput.value;
-    const newDescription=descriptionInput.value;
-    const newEmail=emailInput.value;
-
-    proposalObject={
-        title:newTitle,
-        description:newDescription,
-        completed:faluse
-    }
-
-    proposal.proposalHub.push(proposalObject);
-
-    form.reset();
+function openModal(e){
+  e.preventDefault();
+  console.log ('clicked')
+  modal.style.display="flex";
 }
 
-form.addEventListener("submit",addNewProposal);
+function closeModal(e){
+  e.preventDefault();
+  console.log ("clicked")
+  modal.style.display="none";
+}
+
+function addProposal(e){
+  e.preventDefault();
+
+  console.log("this works")
+  
+  let newProposal = proposalInput.value;
+
+  proposalObject = {
+
+  }
+}
+
+// const form=document.querySelector("form");
+// const titleInput=document.querySelector(".title");
+// const descriptionInput=document.querySelector(".description")
+// const emailInput=document.querySelector(".email");
+// const descriptionCount = document.querySelector('.description_count');
+
+// const count = 100;
+// descriptionCount.innerText = count;
+
+// const proposal={
+//     "proposalHub":[]
+// }
+
+// const addNewProposal=(e) =>{
+//     e.preventDefault;
+//     console.log(e.target)
+
+//     const newTitle=titleInput.value;
+//     const newDescription=descriptionInput.value;
+//     const newEmail=emailInput.value;
+
+//     proposalObject={
+//         title:newTitle,
+//         description:newDescription,
+//         completed:faluse
+//     }
+
+//     proposal.proposalHub.push(proposalObject);
+
+//     form.reset();
+// }
+
+// form.addEventListener("submit",addNewProposal);
 
 
 

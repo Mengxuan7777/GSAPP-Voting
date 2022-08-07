@@ -8,32 +8,80 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>CREATE A PROPOSAL</h2>
-    <main class="container">
-      <section class="left">
-        <form action="">
-          <div>
-            <label for="title">TITLE</label>
-            <input class="title" type="text" name="title"/>
-          </div>
-          <div>
-            <label for="description">DESCRIPTION</label>
-            <input class="description" type="text" name="description"/>
-          </div>
-          <div><span class="description_count"></span> characters left</div>
-          <div>
-            <input type="file" name="photo" accept="image/png, image/gif, image/jpeg">
-          </div>
-          <div>
-            <label for="proposer">PROPOSER</label>
-            <input class="proposer" type="text" name="proposer"/>
-          </div>
-          <div>
-            <button type="click">Post</button>
-          </div>
-        </form>            
-      </section>    
-    </main>
+  <div class="container">
+    <aside>
+      <h1>GSAPP PRO-HUB</h1>
+      <p>This is the gub of Gsapp Proposal. it is open to Gsapp lover. Any thoughts any ideas please let don't hezitate to leave your thoughts!</p>
+      <ul class="navigation">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <button type="button" name="showModal" class="aside_button">MAKE A PROPOSAL</button>
+    </aside>
+    
+    <div class="modal">
+      <form class="form_modal">
+          <h2>Create A Proposal</h2>
+          <label for="title">TITLE</label>
+          <input class="title" type="text" name="title">
+          <label for="description">DESCRIPTION</label>
+          <input class="description" type="text" name="description"/>
+          <label for="proposer">PROPOSER</label>
+          <input class="proposer" type="text" name="proposer"/>
+          <button type="submit" class="modal_button">Post</button>
+          <span class="close">x</span>
+      </form>
+    </div>
+
+    <div class="topnav">
+      <form class="topnav_form">
+        <input type="text" name="search" placeholder="Search..">
+        <button type="submit" class="topnav_button">search<i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <ul>
+      
+    </ul>
+        
+    
+    
+  </div>
+
   <script src="main.js"></script>
-  </body>
+</body>
 </html>
+
+  <!-- <div class="modal-background">
+    <div class="modal-content">
+      <h3>CREATE A PROPOSAL</h3>
+      <main class="container">
+        <section class="left">
+          <form action="">
+            <div>
+              <label for="title">TITLE</label>
+              <input class="title" type="text" name="title"/>
+            </div>
+            <div>
+              <label for="description">DESCRIPTION</label>
+              <input class="description" type="text" name="description"/>
+            </div>
+            <div><span class="description_count"></span> characters left</div>
+            <div>
+              <input type="file" name="photo" accept="image/png, image/gif, image/jpeg">
+            </div>
+            <div>
+              <label for="proposer">PROPOSER</label>
+              <input class="proposer" type="text" name="proposer"/>
+            </div>
+            <div>
+              <button type="click">Post</button>
+            </div>
+          </form>            
+        </section>    
+      </main>
+    </div>
+  
+  </div> -->
+
