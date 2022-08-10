@@ -1,21 +1,24 @@
 console.log ("this works!")
 
-const button= document.querySelector("button");
+const asideBtn= document.querySelector(".aside_button");
 const modal = document.querySelector(".modal");
 const closeBtn= document.querySelector(".close")
 
-const proposalTitle = document.getElementsByName("title")
-const proposalDescription = document.getElementsByName("description")
-const proposalProposer = document.getElementsByName("proposer")
+const proposalTitle = document.querySelector(".title")
+const proposalDescription = document.querySelector(".description")
+const proposalProposer = document.querySelector(".proposer")
 
-const proposalContainer = document.querySelector("ul");
+const modalBtn = document.querySelector('.modal_button')
+const proposalContainer = document.querySelector(".card");
 
 const proposals={
   "proposalList": []
 }
 
-button.addEventListener("click",openModal);
+asideBtn.addEventListener("click",openModal);
 closeBtn.addEventListener("click",closeModal);
+
+modalBtn.addEventListener('click', addProposal)
 
 function openModal(e){
   e.preventDefault();
@@ -29,18 +32,27 @@ function closeModal(e){
   modal.style.display="none";
 }
 
+function pageLoadFn(e){
+  if(localStorage.getItem('proposals') === null){
+    return
+  } else {
+    proposals = JSON.parse(localStorage.getItem('proposals'))
+    proposals.proposalList.forEach(displayProposal)
+  }
+}
+
 function addProposal(e){
   e.preventDefault();
+  console.log ("great")
 
-  console.log("this works")
-  
   let newProposalTitle = proposalTitle.value;
   let newProposalDescription = proposalDescription.value;
   let newProposalProposer = proposalProposer.value;
 
   proposalObject = {
-    handle:"@bot",
-    name: newProposal
+    name: newProposalTitle,
+    description: newProposalDescription,
+    proposer: newProposalProposer
   }
 
   displayProposal(proposalObject);
@@ -49,16 +61,11 @@ function addProposal(e){
 }
 
 function displayProposal(proposal){
-  console.log(proposal)
+  console.log ("hhhhh")
+  let newListItem = document.createElement("card");
+  newListItem.textContent = `${proposal.proposer} ${proposal.description} ${proposal.proposalTitle}`
 
-  let account_name = "Jess Liu"
-  let proposal_handle="@bot"
-
-  let newListItem = document.createElement("li");
-
-  newListItem.textContent = `${account_name} ${proposal_handle} ${proposal.name}`
-
-  form.reset()
+  proposalContainer.appendChild(newListItem)
 }
 
 // const form=document.querySelector("form");

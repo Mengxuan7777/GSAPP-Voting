@@ -21,17 +21,21 @@
     </aside>
     
     <div class="modal">
+      <div class="close">x</div>
       <form class="form_modal">
           <h2>Create A Proposal</h2>
           <label for="title">TITLE</label>
           <input class="title" type="text" name="title">
           <label for="description">DESCRIPTION</label>
           <input class="description" type="text" name="description"/>
+          <label for="file">Select file:</label>
+          <input type="file" name="file">
+          <input type="submit">
           <label for="proposer">PROPOSER</label>
           <input class="proposer" type="text" name="proposer"/>
           <button type="submit" class="modal_button">Post</button>
-          <span class="close">x</span>
       </form>
+          
     </div>
 
     <div class="topnav">
@@ -41,12 +45,12 @@
       </form>
     </div>
 
-    <ul>Proposal Card
+    <ul class="card">
+      <li>
 
+      </li>
     </ul>
-        
-    
-    
+            
   </div>
 
   <script src="main.js"></script>
